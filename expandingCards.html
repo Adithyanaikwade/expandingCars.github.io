@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            flex-direction: center;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            width: 90vw;
+            justify-content: center;
+            background-position: center;
+        }
+
+        .panel {
+            flex: 0.44;
+            display: flex;
+            box-sizing: border-box;
+            margin: 7px;
+            transition: .5s;
+            background-size: cover;
+            border-radius: 50px;
+            height: 80vh;
+        }
+
+        .panel {
+            /* padding-top: 40%; */
+            text-align: center;
+            position: relative;
+            /* opacity: 0.2; */
+        }
+
+        .active {
+            flex: 8;
+
+        }
+
+        .panel p {
+            text-align: center;
+            font-size: 40px;
+            color: white;
+            position: absolute;
+            bottom: 0px;
+            left: 220px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel "></div>
+        <div class="panel "></div>
+        <div class="panel active"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+
+    </div>
+    <script>
+        var paneler;
+        let array = ["tesla-road2.jpg", "tesla-road5.jpg", "tesla-road6.jpg", "tesla-road.jpg", "car10.jpg", "car6.jpg", "car10.jpg"];
+        let panels = document.querySelectorAll(".panel");
+        panels.forEach(backg);
+        function backg(panel, index) {
+            panel.addEventListener("click", flexer);
+            panel.style.backgroundImage = "url(" + array[index] + ")";
+        }
+
+        function flexer() {
+            panels.forEach((panel, index) => {
+                panel.style.flex = .44;
+                panel.innerHTML = "";
+                // paneler = panel;
+            }
+            )
+            // paneler.innerHTML = array[index];
+            this.style.flex = 8;
+            this.innerHTML = "<p>" + array[0] + "</p>";
+            let CONDTS = 8;
+        }
+        table
+    </script>
+</body>
+
+</html>
